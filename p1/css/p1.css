@@ -7,7 +7,7 @@ body {
     width: 50%;
     text-align: center;
     margin: 0 auto;
-    display: inline-block;
+    display: block;
 }
 
 h1 {
