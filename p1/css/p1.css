@@ -1,0 +1,16 @@
+body {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container {
+    width: 50%;
+}
+
+h1 {
+    text-align: center;
+}
+
+.imgcontainer {
+    text-align: center;
+}
