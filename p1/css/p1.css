@@ -11,6 +11,7 @@ h1 {
     text-align: center;
 }
 
-.imgcontainer {
+img {
     text-align: center;
+    border-radius: 50%;
 }
