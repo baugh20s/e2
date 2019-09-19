@@ -14,7 +14,7 @@ $pennies = 300;
 $nickels = 5;
 $dimes = 0;
 $quarters = 125;
-$half = 0;
+$half = 33;
 
 # Add up how much money is in the piggy bank
 $total = ($pennies * $penny_value) + ($nickels * $nickel_value) + ($dimes * $dime_value) + ($quarters * $quarter_value);
