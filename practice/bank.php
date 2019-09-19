@@ -35,7 +35,9 @@ $total = ($pennies * $penny_value) + ($nickels * $nickel_value) + ($dimes * $dim
 
     <p>
         You have $<?php echo $total; ?> in your piggy bank.
+        You have <?php echo $quarter; ?> quarters in your bank.
     </p>
+    
 
 </body>
 </html>
