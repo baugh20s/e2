@@ -15,10 +15,10 @@
 	</ul>
 	<h3>Example Game</h3>
 	<p>
-		Player A plays: <?php echo $rand_move[0]; ?>.
-		Player B plays: <?php echo $rand_move[1]; ?>.
+		Player A plays: <?php echo $playerA; ?>.
+		Player B plays: <?php echo $playerB; ?>.
 
-		The result is: 
+		The result is: <?php echo $winner; ?>.
 	</p>
 
 </body>
