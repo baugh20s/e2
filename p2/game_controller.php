@@ -25,9 +25,9 @@
 // If Rock (0) & Scissors (2), winner is Rock (0)
 // If Paper (1) & Scissors (2), winner is Scissors (2)
 
-    if ($playerA == $playerB) {
+    /*if ($playerA == $playerB) {
         $winner = 'The players have tied.'
-    } /*elseif ($playerA == 0 AND $playerB == 1) {
+    } elseif ($playerA == 0 AND $playerB == 1) {
         $winner = '$playerB.'
     } elseif ($playerA == 0 AND $playerB == 2) {
         $winner = '$playerA.'
