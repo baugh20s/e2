@@ -17,29 +17,25 @@
     $playerA = $moves[$rand_move[0]];
     $playerB = $moves[$rand_move[1]];
 
-    var_dump($playerA);
-    var_dump($playerB);
-
 // If they play the same move, it's a tie
 // If Rock (0) & Paper (1), winner is Paper (1)
 // If Rock (0) & Scissors (2), winner is Rock (0)
 // If Paper (1) & Scissors (2), winner is Scissors (2)
 
-    /*if ($playerA == $playerB) {
-        $winner = 'The players have tied.'
+    if ($playerA == $playerB) {
+        $winner = 'The players have tied.';
     } elseif ($playerA == 0 AND $playerB == 1) {
-        $winner = '$playerB.'
+        $winner = '$playerB.';
     } elseif ($playerA == 0 AND $playerB == 2) {
-        $winner = '$playerA.'
+        $winner = '$playerA.';
     } elseif ($playerA == 1 AND $playerB == 0) {
-        $winner = '$playerA.'
+        $winner = '$playerA.';
     } elseif ($playerA == 1 AND $playerB == 2) {
-        $winner = '$playerB.'
+        $winner = '$playerB.';
     } elseif ($playerA == 2 AND $playerB == 0) {
-        $winner = '$playerB.'
+        $winner = '$playerB.';
     } elseif ($playerA == 2 AND $playerB == 1) {
-        $winner = '$playerA.'
-    }*/
-    
+        $winner = '$playerA.';
+    };
 
 ?>
