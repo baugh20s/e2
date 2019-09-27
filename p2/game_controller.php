@@ -12,13 +12,14 @@
     ];
 
     //Use the rand function to randomly choose a key: 0, 1, or 2.
-    $rand_move = rand(0, 1);
+    $rand_move = array_rand($moves, 2);
 
     //Use that to extract 'rock', 'paper', or 'scissors'.*/
-    $playerA = $moves[$rand_move];
-    //$playerB = $moves[$rand_move];
+    $playerA = $moves[$rand_move[0]];
+    $playerB = $moves[$rand_move[1]];
 
     var_dump($playerA);
+    var_dump($playerB);
 
 /*Rock beats scissors, scissors beats paper, paper beats rock
     * If Rock & Paper, winner is Paper
