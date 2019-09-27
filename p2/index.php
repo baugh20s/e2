@@ -25,8 +25,8 @@
 
 	?>
 	<p>
-		Player A plays: <?php $rand_move ?>.
-		Player B plays: <?php $rand_move ?>.
+		Player A plays: <?php echo $rand_move; ?>.
+		Player B plays: <?php echo $rand_move; ?>.
 
 		The result is: 
 	</p>
