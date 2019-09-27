@@ -18,15 +18,15 @@
 		];
 
 		//2 - set random function for players' moves
-		$rand_move = array_rand($moves, 1);
+		$rand_move = array_rand($moves, 2);
 
 		//3 - set win/loss/tie
 
 
 	?>
 	<p>
-		Player A plays: <?php echo $rand_move; ?>.
-		Player B plays: <?php echo $rand_move; ?>.
+		Player A plays: <?php echo $rand_move[0]; ?>.
+		Player B plays: <?php echo $rand_move[1]; ?>.
 
 		The result is: 
 	</p>
