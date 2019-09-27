@@ -1,3 +1,4 @@
+<?php require 'game_controller.php'; ?>
 <!doctype html>
 <html lang='en'>
 <head>
@@ -6,24 +7,11 @@
 </head>
 <body>
 	<h1>Rock, Paper, Scissors!</h1>
-	<p>ADD INSTRUCTIONS</p>
-	
-	<?php
+	<h3>Rules</h3>
+	<p>
 
-		//1 - set move variables
-		$moves = [
-			'rock',
-			'paper',
-			'scissors',
-		];
-
-		//2 - set random function for players' moves
-		$rand_move = array_rand($moves, 2);
-
-		//3 - set win/loss/tie
-
-
-	?>
+	</p>
+	<h3>Example Game</h3>
 	<p>
 		Player A plays: <?php echo $rand_move[0]; ?>.
 		Player B plays: <?php echo $rand_move[1]; ?>.
