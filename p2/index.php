@@ -1,5 +1,5 @@
 <?php require 'game_controller.php'; ?>
-<!doctype html>
+<!DOCTYPE html>
 <html lang='en'>
 <head>
 	<title>Project 2</title>
@@ -15,10 +15,10 @@
 	</ul>
 	<h3>Example Game</h3>
 	<p>
-		Player A plays: <?php echo $playerA; ?>.
-		Player B plays: <?php echo $playerB; ?>.
+		<!--Player A plays: <?php //echo $playerA; ?>.
+		Player B plays: <?php //echo $playerB; ?>.
 
-		The result is: <?php echo $winner; ?>.
+		The result is: <?php //echo $winner; ?>.-->
 	</p>
 
 </body>

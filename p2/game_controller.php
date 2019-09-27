@@ -17,6 +17,9 @@
     $playerA = $moves[$rand_move[0]];
     $playerB = $moves[$rand_move[1]];
 
+    var_dump($playerA);
+    var_dump($playerB);
+
 // If they play the same move, it's a tie
 // If Rock (0) & Paper (1), winner is Paper (1)
 // If Rock (0) & Scissors (2), winner is Rock (0)
