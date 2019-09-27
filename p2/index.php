@@ -9,21 +9,27 @@
 	<p>ADD INSTRUCTIONS</p>
 	
 	<?php
-		//player A & player B
-		//rock, paper, scissors
 
+		//1 - set move variables
 		$moves = [
 			'rock',
 			'paper',
 			'scissors',
 		];
 
-		var_dump($moves[0]);
-		var_dump($moves[1]);
-		var_dump($moves[2]);
+		//2 - set random function for players' moves
+		$rand_move = array_rand($moves, 1);
+
+		//3 - set win/loss/tie
 
 
 	?>
+	<p>
+		Player A plays: <?php $rand_move ?>.
+		Player B plays: <?php $rand_move ?>.
+
+		The result is: 
+	</p>
 
 </body>
 </html>
