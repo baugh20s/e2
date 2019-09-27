@@ -38,4 +38,5 @@
         $winner = '$playerA.';
     };
 
+    var_dump($winner);
 ?>
