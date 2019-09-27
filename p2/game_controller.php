@@ -38,5 +38,7 @@
         $winner = '$playerA.';
     };
 
+    var_dump($playerA);
+    var_dump($playerB);
     var_dump($winner);
 ?>
