@@ -23,17 +23,17 @@
     if ($playerA == $playerB) {
         $winner = 'The players have tied';
     } elseif ($playerA == 'rock' AND $playerB == 'paper') {
-        $winner = '$playerB';
+        $winner = 'Player B';
     } elseif ($playerA == 'rock' AND $playerB == 'scissors') {
-        $winner = '$playerA';
+        $winner = 'Player A';
     } elseif ($playerA == 'paper' AND $playerB == 'rock') {
-        $winner = '$playerA';
+        $winner = 'Player A';
     } elseif ($playerA == 'paper' AND $playerB == 'scissors') {
-        $winner = '$playerB';
+        $winner = 'Player B';
     } elseif ($playerA == 'scissors' AND $playerB == 'rock') {
-        $winner = '$playerB';
+        $winner = 'Player B';
     } elseif ($playerA == 'scissors' AND $playerB == 'paper') {
-        $winner = '$playerA';
+        $winner = 'Player A';
     };
 
 ?>
