@@ -1,21 +1,22 @@
 body {
     margin-right: auto;
     margin-left: auto;
-}
+};
 
-.container {
+.center {
     width: 50%;
     text-align: center;
     margin: 0 auto;
     display: block;
-}
+};
 
-h1 {
-    text-align: center;
-}
-
-img {
-    border-radius: 50%;
+.right {
+    width: 50%;
+    text-align: right;
     margin: 0 auto;
     display: block;
-}
+};
+
+h1, h3 {
+    text-align: center;
+};

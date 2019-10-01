@@ -8,14 +8,16 @@
 	<link href="/css/p2.css" rel="stylesheet">
 </head>
 <body>
-	<div class="container">	
+	<div class="center">	
 	<h1>Rock, Paper, Scissors!</h1>
 	<h3>Rules</h3>
-	<ul>
-		<li>Players A and B "throw" one of the following moves: rock, paper, or scissors.</li>
-		<li>Rock beats scissors, scissors beats paper, paper beats rock.</li>
-		<li>If they play the same move, it's a tie.</li>
-	</ul>
+	<div class="right">
+		<ul>
+			<li>Players A and B "throw" one of the following moves: rock, paper, or scissors.</li>
+			<li>Rock beats scissors, scissors beats paper, paper beats rock.</li>
+			<li>If they play the same move, it's a tie.</li>
+		</ul>
+	</div>
 	<h3>Example Game</h3>
 	<p>
 		Player A plays <?php echo $playerA; ?>.
