@@ -4,6 +4,8 @@
 <head>
 	<title>Project 2</title>
 	<meta charset='utf-8'>
+
+	<link href="/css/p2.css" rel="stylesheet">
 </head>
 <body>
 	<div class="container">	
