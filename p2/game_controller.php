@@ -21,7 +21,7 @@
    If Paper & Scissors, winner is Scissors */
 
     if ($playerA == $playerB) {
-        $winner = 'The players have tied';
+        $winner = 'nobody - the players have tied';
     } elseif ($playerA == 'rock' AND $playerB == 'paper') {
         $winner = 'Player B';
     } elseif ($playerA == 'rock' AND $playerB == 'scissors') {
