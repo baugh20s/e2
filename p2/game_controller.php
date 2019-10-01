@@ -10,18 +10,15 @@
         'scissors',
     ];
 
-// Use the rand function to randomly choose two keys: 0, 1, or 2.
-    //$rand_moveA = array_rand($moves, 1);
-    //$rand_moveB = array_rand($moves, 1);
 
-// Use that to extract 'rock', 'paper', or 'scissors'.
+// Use rand function to pic random number between 0 and 2 and assign to player A and player B.
     $playerA = $moves[rand(0,2)];
     $playerB = $moves[rand(0,2)];
 
-// If they play the same move, it's a tie
-// If Rock (0) & Paper (1), winner is Paper (1)
-// If Rock (0) & Scissors (2), winner is Rock (0)
-// If Paper (1) & Scissors (2), winner is Scissors (2)
+/* If they play the same move, it's a tie
+   If Rock & Paper, winner is Paper
+   If Rock & Scissors, winner is Rock
+   If Paper & Scissors, winner is Scissors */
 
     if ($playerA == $playerB) {
         $winner = 'The players have tied.';
@@ -39,7 +36,4 @@
         $winner = '$playerA.';
     };
 
-    var_dump($playerA);
-    var_dump($playerB);
-    var_dump($winner);
 ?>
