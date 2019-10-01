@@ -6,6 +6,7 @@
 	<meta charset='utf-8'>
 </head>
 <body>
+	<div class="container">	
 	<h1>Rock, Paper, Scissors!</h1>
 	<h3>Rules</h3>
 	<ul>
@@ -18,8 +19,8 @@
 		Player A plays <?php echo $playerA; ?>.
 		Player B plays <?php echo $playerB; ?>.
 
-		The result is <?php echo $winner; ?>.
+		The winner is <?php echo $winner; ?>.
 	</p>
-
+	</div>
 </body>
 </html>
