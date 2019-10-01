@@ -15,8 +15,8 @@
     //$rand_moveB = array_rand($moves, 1);
 
 // Use that to extract 'rock', 'paper', or 'scissors'.
-    $playerA = $moves[$rand(0,2)];
-    $playerB = $moves[$rand(0,2)];
+    $playerA = $moves[rand(0,2)];
+    $playerB = $moves[rand(0,2)];
 
 // If they play the same move, it's a tie
 // If Rock (0) & Paper (1), winner is Paper (1)
@@ -31,7 +31,7 @@
         $winner = '$playerA.';
     } elseif ($playerA == 'paper' AND $playerB == 'rock') {
         $winner = '$playerA.';
-    } elseif ($playerA == 'paper' AND $playerB == 2) {
+    } elseif ($playerA == 'paper' AND $playerB == 'scissors') {
         $winner = '$playerB.';
     } elseif ($playerA == 'scissors' AND $playerB == 'rock') {
         $winner = '$playerB.';
