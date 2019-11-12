@@ -1,6 +1,4 @@
 <?php
-// app/Products.php
-
 namespace App;
 
 class Products

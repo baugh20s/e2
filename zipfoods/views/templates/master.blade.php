@@ -25,7 +25,7 @@
 <footer>
 </footer>
 
-@yield('body')
+    @yield('body')
 
 </body>
 </html>
