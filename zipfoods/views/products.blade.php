@@ -12,7 +12,7 @@ All Products
     <a href='/product?id={{ $product["id"] }}'>
         <div class='product'>
             <div class='product-name'>{{ $product['name'] }}</div>
-            <img class='product-thumb' src="/images/products/{{ $product['id'] }}.jpg">
+            <img class='product-thumb' src='/images/products/{{ $product["id"] }}.jpg'>
         </div>
     </a>
     @endforeach

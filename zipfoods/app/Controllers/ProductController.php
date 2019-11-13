@@ -10,14 +10,14 @@ class ProductController extends Controller
     public function __construct($app)
     {
         parent::__construct($app);
-        $this->$products = new Products($this->app->path('database/products.json'));
+        $this->products = new Products($this->app->path('database/products.json'));
         
     }
 
     public function index()
     {
         return $this->app->view('products.index', [
-            'products' => $this->$products->getAll()
+            'products' => $this->products->getAll()
         ]);
 
     }
@@ -27,6 +27,12 @@ class ProductController extends Controller
         $id = $this->app->param('id');
 
         $product = $this->products->getById($id);
+
+        if (is_null($product)) {
+            return $this->app->view('products.missing', [
+                'product' => $product
+            ]);
+        }
         
         return $this->app->view('products.show', [
             'product' => $product
