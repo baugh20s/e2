@@ -5,6 +5,20 @@
 @endsection
 
 @section('content')
+
+@if($app->errorsExist())
+<ul class='error alert alert-danger'>
+    @foreach($app->errors() as $error)
+    <li>{{ $error }}</li>
+    @endforeach
+</ul>
+@endif
+@if($confirmationName)
+<div class='alert alert-success'>
+    Thank you for your review, {{ $confirmationName }}.
+</div>
+@endif
+
 <div id='product-show'>
 <h2>{{ $product['name'] }}</h2>
 
@@ -15,6 +29,22 @@
 </p>
 
 <div class='product-price'>${{ $product['price'] }}</div>
+<form method='POST' id='product-review' action='/products/save-review'>
+        <h3>Review this product</h3>
+        <input type='hidden' name='id' value='{{ $product["id"] }}'>
+        <div class='form-group'>
+            <label for='name'>Name</label>
+            <input type='text' class="form-control" name='name' id='name' value='{{ $app->old("name") }}'>
+        </div>
+
+        <div class='form-group'>
+            <label for='review'>Review</label>
+            <textarea name='review' id='review' class='form-control'>{{ $app->old('review') }}</textarea>
+        </div>
+
+        <button type='submit' class='btn btn-primary'>Submit Review</button>
+    </form>
+
 </div>
 
 <a href='/products'>&larr; Return to all products</a>
