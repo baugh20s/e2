@@ -86,4 +86,10 @@ class AppController extends Controller
             $statement = $pdo->prepare($sqlTemplate);
             $statement->execute($values);
     }
+
+    public function practice2()
+    {
+        //dump($this->app->db()->all('products'));
+        dump($this->app->db()->findById('products', 5));
+    }
 }
