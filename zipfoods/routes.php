@@ -8,6 +8,6 @@ return [
     '/about' => ['AboutController', 'index'],
     '/practice' => ['AppController', 'practice'],
     '/practice2' => ['AppController', 'practice2'],
-    '/products/new' => ['ProductController', 'addProduct'],
-    '/products/save-new' => ['ProductController', 'saveProduct'],
+    '/products/new' => ['ProductController', 'newProduct'],
+    '/products/save-product' => ['ProductController', 'saveProduct'],
 ];

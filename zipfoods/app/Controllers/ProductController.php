@@ -42,7 +42,7 @@ class ProductController extends Controller
         # Load the review details
         $reviews = $this->app->db()->findbyColumn('reviews', 'product_id', '=', $id);
         
-        # If the suer submitted the review form, we'll have a confirmation name
+        # If the user submitted the review form, we'll have a confirmation name
         # that we'll pass to the view to show them a confirmation message
         $confirmationName = $this->app->old('confirmationName');        
         
@@ -81,23 +81,54 @@ class ProductController extends Controller
         $this->app->redirect('/product?id='.$id, ['confirmationName' => $name]);
     }
 
-    public function saveNew()
+    public function newProduct()
+    {
+
+        $name = $this->app->old('name');        
+        
+        return $this->app->view('products.new', [
+            'name' => $name,
+        ]);
+    }
+
+    public function saveProduct()
     {
         # Validation
-        $this->app->validate([
+        /*$this->app->validate([
             'name' => 'required',
-            'newProduct' => 'required|minLength:5',
-        ]);
+            'description' => 'required',
+            'price' => 'required',
+            'available' => 'required',
+            'weight' => 'required',
+            'perishable' => 'required',
+        ]);*/
 
         # Extract data from the form submission
-        $name = $this->app->input('name');
-        $newProduct = $this->app->input('newProduct');
         $id = $this->app->input('id');
+        $name = $this->app->input('name');
+        $description = $this->app->input('description');
+        $price = $this->app->input('price');
+        $available = $this->app->input('available');
+        $weight = $this->app->input('weight');
+        $perishable = $this->app->input('perishable');
 
+        
         # TODO: Persist the review to the database
+        
+        $data = [
+            'product_id' => $id,
+            'name' => $name,
+            'description' => $description,
+            'available' => $available,
+            'weight' => $weight,
+            'perishable' => $perishable,
+        ];
+        
+        
+        $this->app->db()->insert('products', $data);
 
-        # Send the user back to the product page with a `confirmationName`
-        # we'll use to display a confirmation message.
-        $this->app->redirect('/product?id='.$id, ['confirmationName' => $name]);
+        # Send the user back to the new product page with a confirmation message.
+        $this->app->redirect('/products/new', ['name' => $name]);
     }
 }
+
