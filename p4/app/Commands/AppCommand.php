@@ -19,7 +19,7 @@ class AppCommand extends Command
     {
         # Set up game details
         # `id` is omitted as that's created automatically
-        $past_games = [
+        $past_game = [
             'user_move' => 'rock',
             'computer_move' => 'scissors',
             'result' => 'user',
