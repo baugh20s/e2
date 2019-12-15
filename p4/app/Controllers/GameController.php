@@ -9,7 +9,9 @@ class GameController extends Controller
     
      public function gameHistory()
     {
-        return $this->app->view('gameHistory');
+        $gameHistory = $this->app->db()->all('past_games');
+
+        return $this->app->view('gameHistory', ['past_games' => $gameHistory]);
     }
 
     public function gameDetails()

@@ -4,8 +4,35 @@ namespace App\Commands;
 
 class AppCommand extends Command
 {
-    public function test()
+
+    public function migrate()
     {
-        dump('It works! You invoked your first command.');
+        $this->app->db()->createTable('past_games', [
+            'user_move' => 'varchar(255)',
+            'computer_move' => 'varchar(255)',
+            'result' => 'text',
+            'date_time' => 'timestamp',
+        ]);
+    }
+
+    public function seed()
+    {
+        # Set up game details
+        # `id` is omitted as that's created automatically
+        $past_games = [
+            'user_move' => 'rock',
+            'computer_move' => 'scissors',
+            'result' => 'user',
+            'date_time' => '2019-12-10 00:00:01',
+        ];
+
+        # Insert game
+        $this->app->db()->insert('past_games', $past_game);
+    }
+
+    public function fresh()
+    {
+        $this->migrate();
+        $this->seed();
     }
 }
