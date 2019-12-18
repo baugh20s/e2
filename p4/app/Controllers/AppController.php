@@ -11,11 +11,21 @@ class AppController extends Controller
         $user_move = $this->app->old('user_move', null);
         $computer_move = $this->app->old('computer_move', null);
         $result = $this->app->old('result', null);
+        $mostRecent = '';
+
+        if($result) {
+            $sql = 'SELECT MAX(id) AS id FROM past_games';
+            $executed = $this->app->db()->run($sql);
+            $mostRecent = $executed->fetchColumn();
+        };
+        
         return $this->app->view('index', [
             'user_move' => $user_move,
             'computer_move' => $computer_move,
             'result' => $result,
+            'mostRecent' => $mostRecent,
             ]);
+        
     }
 
     public function saveGame()
@@ -30,11 +40,12 @@ class AppController extends Controller
 
         // create array of possible results
         $results = array (
-            'UserWin' => 'Well played, you won this round',
-            'ComputerWin' => 'Nice try, but the computer won this round',
-            'Tie' => 'Good effort, you tied with the computer',
+            'UserWin' => 'Well played, you won this round.',
+            'ComputerWin' => 'Nice try, but the computer won this round.',
+            'Tie' => 'Good effort, you tied with the computer.',
         );
        
+        // validation
         $this->app->validate([
             'user_move' => 'required',
             ]);
@@ -75,6 +86,8 @@ class AppController extends Controller
 
         // redirect
         $this->app->redirect('/', $data);
+
+        
  
     }
 

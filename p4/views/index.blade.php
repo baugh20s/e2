@@ -15,6 +15,7 @@
 @elseif($result)
 <div class='alert alert-success'>
 	{{ $result }}
+	<p><a href='/game-details?id={{ $mostRecent }}'>view game details<a></p>
 </div>
 @endif
 
